@@ -37,13 +37,13 @@ export const constantRouterMap = [
         meta: {
             type: "user",
             icon: 'el-icon-star-off',
-            title: '最新动态'
+            title: 'Recent News'
         },
         children: [
             {
                 path: 'main',
                 component: NewMain,
-                meta: { title: '最新动态' }
+                meta: { title: 'Recent News' }
             }
         ]
     },
@@ -54,18 +54,18 @@ export const constantRouterMap = [
         meta: {
             type: "user",
             icon: 'el-icon-mobile-phone',
-            title: '社交圈'
+            title: 'Social'
         },
         children: [
             {
                 path: 'main',
                 component: SocialMain,
-                meta: { title: '社交圈' }
+                meta: { title: 'social' }
             },
             {
                 path: 'details/:name',
                 component: SocialDetails,
-                meta: { title: '用户资料' }
+                meta: { title: 'User Info' }
             }
         ]
     },
@@ -76,28 +76,28 @@ export const constantRouterMap = [
         meta: {
             type: "user",
             icon: 'el-icon-edit-outline',
-            title: '博客列表'
+            title: 'Blog List'
         },
         children: [
             {
                 path: 'main',
                 component: BlogMain,
-                meta: { title: '博客列表' }
+                meta: { title: 'Blog List' }
             },
             {
                 path: 'add',
                 component: BlogAdd,
-                meta: { title: '发表博客' }
+                meta: { title: 'Send Blog' }
             },
             {
                 path: 'edit/:id',
                 component: BlogEdit,
-                meta: { title: '编辑博客' }
+                meta: { title: 'Edit Blog' }
             },
             {
                 path: 'details/:id',
                 component: BlogDetails,
-                meta: { title: '博客详情' }
+                meta: { title: 'Blog Details' }
             }
         ]
     },
@@ -108,18 +108,18 @@ export const constantRouterMap = [
         meta: {
             type: "user",
             icon: 'el-icon-service',
-            title: '开源项目'
+            title: 'Source Code'
         },
         children: [
             {
                 path: 'main',
                 component: ProjectMain,
-                meta: { title: '项目列表' }
+                meta: { title: 'Project List' }
             },
             {
                 path: 'details/:name',
                 component: ProjectDetails,
-                meta: { title: '项目详情' }
+                meta: { title: 'Project Detail' }
             }
         ]
     },
@@ -130,34 +130,34 @@ export const constantRouterMap = [
         meta: {
             type: "user",
             icon: 'el-icon-printer',
-            title: '使用帮助',
+            title: 'About Me',
             mini: true
         },
         children: [
             {
                 path: 'main',
                 component: HelperMain,
-                meta: { title: '使用帮助' }
+                meta: { title: 'About Me' }
             }
         ]
     },
-    {
-        path: '/user/readme',
-        redirect: '/user/readme/main',
-        component: Layout,
-        meta: {
-            type: "user",
-            icon: 'el-icon-document',
-            title: 'README.md'
-        },
-        children: [
-            {
-                path: 'main',
-                component: ReadmeMain,
-                meta: { title: 'README.md' }
-            }
-        ]
-    },
+    // {
+    //     path: '/user/readme',
+    //     redirect: '/user/readme/main',
+    //     component: Layout,
+    //     meta: {
+    //         type: "user",
+    //         icon: 'el-icon-document',
+    //         title: 'README.md'
+    //     },
+    //     children: [
+    //         {
+    //             path: 'main',
+    //             component: ReadmeMain,
+    //             meta: { title: 'README.md' }
+    //         }
+    //     ]
+    // },
     {
         path: '/user/configure',
         redirect: '/user/configure/main',
@@ -165,14 +165,14 @@ export const constantRouterMap = [
         meta: {
             type: "user",
             icon: 'el-icon-setting',
-            title: '系统配置',
+            title: 'Setting',
             LoginRequired: true
         },
         children: [
             {
                 path: 'main',
                 component: ConfigureMain,
-                meta: { title: '系统配置' }
+                meta: { title: 'Setting' }
             }
         ]
     },
@@ -200,7 +200,7 @@ export const constantRouterMap = [
         meta: {
             type: "mobile",
             icon: 'edit',
-            title: '博客'
+            title: 'Blog'
         },
         children: [
             {
@@ -227,7 +227,7 @@ export const constantRouterMap = [
         meta: {
             type: "mobile",
             icon: 'like-o',
-            title: '项目'
+            title: 'Project'
         },
         children: [
             {
@@ -254,7 +254,7 @@ export const constantRouterMap = [
         meta: {
             type: "mobile",
             icon: 'contact',
-            title: '个人'
+            title: 'Me'
         },
         children: [
             {

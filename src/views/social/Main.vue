@@ -2,7 +2,7 @@
     <div>
         <el-card shadow="never" style="min-height: 400px;margin-bottom: 20px;padding: 0px 0px 20px 0px">
             <el-tabs v-model="activeTab" type="card" @tab-click="onSelect">
-                <el-tab-pane :label="'粉丝 '+followersTotal" name="followers" style="padding: 5px">
+                <el-tab-pane :label="'Fans '+followersTotal" name="followers" style="padding: 5px">
                     <div v-loading="followers.loading">
                         <div v-if="followers.list.length">
                             <el-row style="min-height: 200px; ">
@@ -12,7 +12,7 @@
                                         <a @click="$router.push(`/user/social/details/${item.name}`)" style=" text-decoration:none;cursor:pointer">{{item.name}}</a>
                                         <br>
                                         <i class="el-icon-message"></i>&emsp;
-                                        <a :href="item.htmlUrl" target="_blank" style=" text-decoration:none;cursor:pointer">TA的主页</a>
+                                        <a :href="item.htmlUrl" target="_blank" style=" text-decoration:none;cursor:pointer">His Page</a>
                                         <br>
                                         <img :src="item.avatarUrl" style="width: 100%;border-radius:5px;margin-top: 5px">
                                     </el-card>
@@ -26,12 +26,12 @@
                         </div>
                         <div style="min-height: 300px;margin-bottom: 20px;padding: 20px 0px 20px 0px;text-align: center" v-else>
                             <font style="font-size: 30px;color:#dddddd ">
-                                <b>(￢_￢) 没有一个粉丝</b>
+                                <b>(￢_￢) No Fans</b>
                             </font>
                         </div>
                     </div>
                 </el-tab-pane>
-                <el-tab-pane :label="'关注 '+followingTotal" name="following" style="padding: 5px">
+                <el-tab-pane :label="'Attention '+followingTotal" name="following" style="padding: 5px">
                     <div v-loading="following.loading">
                         <div v-if="following.list.length">
                             <el-row style="min-height: 200px; ">
@@ -41,7 +41,7 @@
                                         <a @click="$router.push(`/user/social/details/${item.name}`)" style=" text-decoration:none;cursor:pointer">{{item.name}}</a>
                                         <br>
                                         <i class="el-icon-message"></i>&emsp;
-                                        <a :href="item.htmlUrl" target="_blank" style=" text-decoration:none;cursor:pointer">TA的主页</a>
+                                        <a :href="item.htmlUrl" target="_blank" style=" text-decoration:none;cursor:pointer">His Page</a>
                                         <br>
                                         <img :src="item.avatarUrl" style="width: 100%;border-radius:5px;margin-top: 5px">
                                     </el-card>
@@ -55,7 +55,7 @@
                         </div>
                         <div style="min-height: 300px;margin-bottom: 20px;padding: 20px 0px 20px 0px;text-align: center" v-else>
                             <font style="font-size: 30px;color:#dddddd ">
-                                <b>(￢_￢) 还没有关注一个人</b>
+                                <b>(￢_￢) No attention</b>
                             </font>
                         </div>
                     </div>

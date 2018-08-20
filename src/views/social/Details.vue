@@ -3,7 +3,7 @@
         <el-card shadow="never" style="min-height: 400px;margin-bottom: 20px;">
             <div slot="header" class="clearfix">
                 <span>{{githubUsername}}</span>
-                <el-button @click="$router.go(-1)" style="float: right; padding: 3px 0" type="text" icon="el-icon-d-arrow-left">返回</el-button>
+                <el-button @click="$router.go(-1)" style="float: right; padding: 3px 0" type="text" icon="el-icon-d-arrow-left">return</el-button>
             </div>
             <el-row>
                 <el-col :span="9" style="padding: 0px 10px 20px 0px">

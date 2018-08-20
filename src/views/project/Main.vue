@@ -19,14 +19,14 @@
                         </el-col>
                         <el-col :span="8">
                             <div style="text-align: right;">
-                                <el-button @click="goGithub(item.url)" style="padding: 3px 0" type="text" icon="el-icon-back">前往GitHub</el-button>
+                                <el-button @click="goGithub(item.url)" style="padding: 3px 0" type="text" icon="el-icon-back">Go GitHub</el-button>
                                 <el-button @click="$share('/user/project/details/'+item.name)" style="padding: 3px 0" type="text" icon="el-icon-share"></el-button>
                             </div>
                         </el-col>
                     </el-row>
                 </div>
                 <div style="font-size: 0.9rem;line-height: 1.5;color: #606c71;">
-                    最近更新 {{item.updateTime}}
+                    Recently Update {{item.updateTime}}
                 </div>
                 <div style="font-size: 1.1rem;line-height: 1.5;color: #303133;padding: 10px 0px 0px 0px">
                     {{item.description}}

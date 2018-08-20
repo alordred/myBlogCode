@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <section class="page-header" :style="'background-image: linear-gradient(120deg, '+backgroundColorLeft+', '+backgroundColorRight+');color: '+fontColor+';'">
+    <div class="page" :style="backgroundPictureAll">
+        <section class="page-header" :style="backgroundPictureHeader">
             <div style="position:absolute; top:20px; right:20px; z-index:2;">
                 <el-tooltip effect="dark" :content="fullButton.full?'退出':'全屏'" placement="bottom-end">
                     <el-button @click="full" :icon="fullButton.full?'el-icon-close':'el-icon-rank'" circle></el-button>
@@ -13,8 +13,8 @@
             </div>
             <h1 class="project-name">{{blogTitle}}</h1>
             <h2 class="project-tagline">{{blogDescribe}}</h2>
-            <a :href="'https://github.com/'+githubUsername" class="btn" target="_blank">GitHub主页</a>
-            <a href="https://github.com/GitHub-Laziji/vblog" class="btn" target="_blank" v-if="!mini">博客源码</a>
+            <a :href="'https://github.com/'+githubUsername" class="btn" target="_blank">My GitHub</a>
+            <a href="http://i.youku.com/i/UMzU4MjM5NjI0" class="btn" target="_blank" v-if="!mini">My Video</a>
         </section>
         <div style="position:relative;  z-index:2;margin: auto;margin-top:-30px;width:64rem;">
             <el-card shadow="never" :body-style="{ padding: '0px' }">
@@ -22,12 +22,12 @@
                     <el-col :span="10">
                         <el-menu @select="selectTopbar" :default-active="topbar.active" mode="horizontal" menu-trigger="click">
                             <el-submenu index="#more">
-                                <template slot="title">了解博主</template>
-                                <el-menu-item index="#githubHome">github主页</el-menu-item>
-                                <el-menu-item index="#blog">其他博客</el-menu-item>
+                                <template slot="title">About Me</template>
+                                <el-menu-item index="#githubHome">Github Page</el-menu-item>
+                                <!-- <el-menu-item index="#blog">其他博客</el-menu-item> -->
                             </el-submenu>
                             <el-submenu index="#webSites" v-if="webSites.length>0">
-                                <template slot="title">其他网站</template>
+                                <template slot="title">My Hobby</template>
                                 <el-menu-item :index="'#webSites-'+index" v-for="(item,index) in webSites" :key="'#webSites'+index">{{item.name}}</el-menu-item>
                             </el-submenu>
                         </el-menu>
@@ -116,6 +116,15 @@
         },
         data() {
             return {
+                backgroundPictureHeader:{
+                    backgroundImage: "url(" + require("../../assets/me8.jpg") + ")",
+                    backgroundRepeat: "no-repeat",
+                    marginTop: "0px",
+                },
+                backgroundPictureAll:{
+                    backgroundImage: "url(" + require("../../assets/back2.jpg") + ")",
+                    backgroundRepeat: "repeat",
+                },
                 music: {
                     isPlay: false,
                     currentTime: 0,
@@ -262,12 +271,18 @@
 </script>
 
 <style>
+    .page {
+        background-size: 100%, 100%;
+    }
+
     .page-header {
         padding: 5rem 6rem;
         color: #fff;
         text-align: center;
         background-color: #159957;
-        background-image: linear-gradient(120deg, #155799, #159957);
+        background-size: 100%, 100%;
+        background-position:100% 63%;
+        /*background-image: linear-gradient(120deg, #155799, #159957);*/
     }
 
     .project-name {

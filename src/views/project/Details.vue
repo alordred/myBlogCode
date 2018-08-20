@@ -9,8 +9,8 @@
                     <el-col :span="12">
                         <div style="text-align: right;">
                             <el-button @click="$share()" style="padding: 3px 0" type="text" icon="el-icon-share">分享</el-button>
-                            <el-button @click="goGithub(project.url)" style="padding: 3px 0" type="text" icon="el-icon-back">前往GitHub</el-button>
-                            <el-button @click="more" style="padding: 3px 0" type="text" icon="el-icon-more-outline">更多项目</el-button>
+                            <el-button @click="goGithub(project.url)" style="padding: 3px 0" type="text" icon="el-icon-back">Go GitHub</el-button>
+                            <el-button @click="more" style="padding: 3px 0" type="text" icon="el-icon-more-outline">More Projects</el-button>
                         </div>
                     </el-col>
                 </el-row>
