@@ -13,7 +13,7 @@
         <el-card shadow="never" style="margin-top: 20px;text-align: center">
             <div v-if="!token" style="font-size: 0.9rem;line-height: 1.5;color: #606c71;">
                 <el-tag type="danger" size="small">&nbsp;</el-tag>&nbsp;&nbsp; Token not locked&nbsp;&nbsp;
-                <el-button type="text" @click="openTokenDialog">locked success</el-button>
+                <el-button type="text" @click="openTokenDialog">Token not locked</el-button>
             </div>
             <div v-if="token" style="font-size: 0.9rem;line-height: 1.5;color: #303133;">
                 <el-tag type="success" size="small">&nbsp;</el-tag>&nbsp;&nbsp; Token had locked&nbsp;&nbsp;

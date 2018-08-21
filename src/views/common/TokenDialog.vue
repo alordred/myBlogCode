@@ -1,6 +1,6 @@
 <template>
     <div>
-        <el-dialog title="绑定Token" :visible.sync="show" width="500px">
+        <el-dialog title="locked Token" :visible.sync="show" width="500px">
             <el-form :model="tokenForm" ref="tokenForm" label-width="100px">
                 <el-form-item label="GitHub">
                     <el-tag>{{githubUsername}}</el-tag>

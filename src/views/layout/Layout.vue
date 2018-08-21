@@ -24,7 +24,7 @@
                             <el-submenu index="#more">
                                 <template slot="title">About Me</template>
                                 <el-menu-item index="#githubHome">Github Page</el-menu-item>
-                                <!-- <el-menu-item index="#blog">其他博客</el-menu-item> -->
+                                <el-menu-item index="#blog">其他博客</el-menu-item>
                             </el-submenu>
                             <el-submenu index="#webSites" v-if="webSites.length>0">
                                 <template slot="title">My Hobby</template>
