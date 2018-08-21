@@ -13,43 +13,53 @@
             </div>
             <h1 class="project-name">{{blogTitle}}</h1>
             <h2 class="project-tagline">{{blogDescribe}}</h2>
-            <a :href="'https://github.com/'+githubUsername" class="btn" target="_blank">My GitHub</a>
-            <a href="http://i.youku.com/i/UMzU4MjM5NjI0" class="btn" target="_blank" v-if="!mini">My Video</a>
+            <!-- <a :href="'https://github.com/'+githubUsername" class="btn" target="_blank">My GitHub</a> -->
+            <!-- <a href="http://i.youku.com/i/UMzU4MjM5NjI0" class="btn" target="_blank" v-if="!mini">My Video</a> -->
         </section>
-        <div style="position:relative;  z-index:2;margin: auto;margin-top:-30px;width:64rem;">
-            <el-card shadow="never" :body-style="{ padding: '0px' }">
+        <div style="position:relative;  z-index:2;margin: auto;margin-top:3px;width:64rem;height:38px;content-bottom: 0px">
+            <el-card class="toolBar" shadow="never" :body-style="{ padding: '0px' }">
                 <el-row>
                     <el-col :span="10">
-                        <el-menu @select="selectTopbar" :default-active="topbar.active" mode="horizontal" menu-trigger="click">
-                            <el-submenu index="#more">
-                                <template slot="title">About Me</template>
+                        <a :href="'https://github.com/'+githubUsername" class="btn" target="_blank" style="margin-top: 10px;margin-left: 9px;">
+                            My GitHub
+                        </a>
+                        <a href="http://i.youku.com/i/UMzU4MjM5NjI0" class="btn" target="_blank" v-if="!mini">
+                            My Video
+                        </a>
+<!--                         <el-menu @select="selectTopbar" :default-active="topbar.active" mode="horizontal" menu-trigger="click">
+                            <el-submenu index="#more" class="titleWords">
+                                <template slot="title">
+                                    About Me
+                                </template>
                                 <el-menu-item index="#githubHome">Github Page</el-menu-item>
                                 <el-menu-item index="#blog">其他博客</el-menu-item>
                             </el-submenu>
                             <el-submenu index="#webSites" v-if="webSites.length>0">
-                                <template slot="title">My Hobby</template>
+                                <template slot="title">
+                                    My Hobby
+                                </template>
                                 <el-menu-item :index="'#webSites-'+index" v-for="(item,index) in webSites" :key="'#webSites'+index">{{item.name}}</el-menu-item>
                             </el-submenu>
-                        </el-menu>
+                        </el-menu> -->
                     </el-col>
-                    <el-col :span="8" style="text-align: center;padding: 12px 0px 0px 10px">
+                    <el-col :span="8" style="text-align: center;padding: 27px 0px 0px 0px">
                         <el-row>
                             <el-col :span="4">
                                 <el-popover placement="top" trigger="hover">
-                                    <div style="text-align: center">
+                                    <div class="slider" style="text-align: center">
                                         <el-progress color="#67C23A" type="circle" :percentage="music.volume"></el-progress>
                                         <br>
                                         <el-button @click="changeVolume(-10)" icon="el-icon-minus" circle></el-button>
                                         <el-button @click="changeVolume(10)" icon="el-icon-plus" circle></el-button>
                                     </div>
 
-                                    <el-button @click="play" id="play" slot="reference" :icon="music.isPlay?'el-icon-refresh':'el-icon-caret-right'" circle></el-button>
+                                    <el-button @click="play" id="play" slot="reference" :icon="music.isPlay?'el-icon-refresh':'el-icon-caret-right'" size="mini" type="info" plain></el-button>
                                 </el-popover>
                             </el-col>
-                            <el-col :span="14" style="padding-left: 20px">
+                            <el-col :span="14" style="padding-left: 10px;">
                                 <el-slider @change="changeTime" :format-tooltip="$util.formatTime" :max="music.maxTime" v-model="music.currentTime" style="width: 100%;"></el-slider>
                             </el-col>
-                            <el-col :span="6" style="padding: 9px 0px 0px 10px;color:#909399;font-size: 13px">
+                            <el-col :span="6" style="padding: 12px 0px 0px 10px;color:#909399;font-size: 13px">
                                 {{$util.formatTime(music.currentTime)}}/{{$util.formatTime(music.maxTime)}}
                             </el-col>
                         </el-row>
@@ -61,8 +71,8 @@
                             <source :src="audioUrl" type="audio/mpeg">
                         </audio>
                     </el-col>
-                    <el-col :span="4" style="text-align: right;">
-                        <div style="font-size: 20px;color:#606266;margin-top: 5px">
+                    <el-col :span="4" style="text-align: right;margin-top: 5px;">
+                        <div style="font-size: 20px;color:#606266;margin-top: 10px">
                             <b>{{githubUsername}}</b>
                         </div>
                         <div style="color:#606266;">
@@ -70,8 +80,8 @@
                             <br>
                         </div>
                     </el-col>
-                    <el-col :span="2" style="text-align: center;">
-                        <img v-popover:bigAvatar :src="avatarUrl" style="margin-top: 4px;margin-right: 10px;width:52px; height:52px; border-radius:5px; border: 1px solid #EBEEF5"
+                    <el-col :span="2" style="text-align: center;margin-buttom: 0px;">
+                        <img v-popover:bigAvatar :src="avatarUrl" style="margin-top: 4px;margin-right: 10px;margin-buttom: 0px;width:52px; height:52px; border-radius:1px; border: 1px solid #EBEEF5"
                         />
                         <el-popover ref="bigAvatar" placement="top-start" :title="githubUsername" width="200" trigger="hover">
                             <i class="el-icon-star-on"></i>&emsp;{{name}}
@@ -352,4 +362,32 @@
         color: #586069 !important;
         word-wrap: break-word;
     }
+
+/*    .el-menu {
+        background-color:red;
+    }*/
+    .toolBar {
+        max-height: 3.8rem;
+        background-color:transparent !important;
+    }
+
+    .el-menu {
+        background-color:transparent !important;
+    }
+
+    .el-button {
+        background-color:transparent !important;
+    }
+
+    .titleWords {
+        font-size: 20rem;
+    }
+
+/*    .el-slider {
+        background-color:transparent !important;
+    }
+
+    .el-popover {
+      background-color:transparent !important;
+    }*/
 </style>

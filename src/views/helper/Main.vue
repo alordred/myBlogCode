@@ -2,7 +2,7 @@
     <div>
         <el-card shadow="never" style="min-height: 600px;margin-bottom: 20px;">
             <el-collapse v-model="active" accordion>
-                <el-collapse-item title="My Hobbies" name="deploy">
+                <el-collapse-item title="Work" name="deploy">
                     <el-carousel trigger="click" height="352px" :autoplay="false" @change="deployChange">
                         <el-carousel-item v-for="(item,index) in deploy.images" :key="'deploy'+index">
                             <div style="border-radius:5px; border: 1px solid #EBEEF5;height: 350px;" align="center">
@@ -11,14 +11,12 @@
                         </el-carousel-item>
                     </el-carousel>
                     <el-steps :active="deploy.active" align-center style="margin-top: 20px;" :process-status="deploy.status">
-                        <el-step title="Guitar" description="6 year"></el-step>
-                        <el-step title="Piano" description="1 year"></el-step>
-                        <el-step title="Fitness" description="1 year"></el-step>
-                        <el-step title="Badminton" description="8 year"></el-step>
-                        <el-step title="Art" description="life time"></el-step>
+                        <el-step title="Education" description="Tsinghua CS Master, BeiHang software B.E"></el-step>
+                        <el-step title="Work Place" description="School of Information Science and Technology, Tsinghua University"></el-step>
+                        <el-step title="Pay Method" description="If you want to give me a cup of coffee"></el-step>
                     </el-steps>
                 </el-collapse-item>
-                <el-collapse-item title="My Work" name="use">
+                <el-collapse-item title="Hobbies" name="use">
                     <el-carousel trigger="click" height="352px" :autoplay="false" @change="useChange">
                         <el-carousel-item v-for="(item,index) in use.images" :key="'use'+index">
                             <div style="border-radius:5px; border: 1px solid #EBEEF5;height: 350px;" align="center">
@@ -27,9 +25,11 @@
                         </el-carousel-item>
                     </el-carousel>
                     <el-steps :active="use.active" align-center style="margin-top: 20px;" :process-status="use.status">
-                        <el-step title="Education" description="Tsinghua CS Master, BeiHang software B.E"></el-step>
-                        <el-step title="Work Place" description="School of Information Science and Technology, Tsinghua University"></el-step>
-                        <el-step title="Pay Method" description="If you want to give me a cup of coffee"></el-step>
+                        <el-step title="Guitar" description="6 year"></el-step>
+                        <el-step title="Piano" description="1 year"></el-step>
+                        <el-step title="Fitness" description="1 year"></el-step>
+                        <el-step title="Badminton" description="8 year"></el-step>
+                        <el-step title="Art" description="life time"></el-step>
                     </el-steps>
                 </el-collapse-item>
                 <el-collapse-item title="Contact" name="develop">
@@ -57,20 +57,20 @@
                 active: "deploy",
                 deploy: {
                     images: [
-                        require('../../assets/me5.jpg'),
-                        require('../../assets/me9.jpg'),
-                        require('../../assets/me3.jpg'),
-                        require('../../assets/me4.jpg'),
-                        require('../../assets/me1.jpg'),
+                        require('../../assets/me6.jpg'),
+                        require('../../assets/pic1.jpg'),
+                        require('../../assets/payPic.jpg')
                     ],
                     status: "process",
                     active: 0,
                 },
                 use: {
                     images: [
-                        require('../../assets/me6.jpg'),
-                        require('../../assets/pic1.jpg'),
-                        require('../../assets/payPic.jpg')
+                        require('../../assets/me5.jpg'),
+                        require('../../assets/me9.jpg'),
+                        require('../../assets/me3.jpg'),
+                        require('../../assets/me4.jpg'),
+                        require('../../assets/me1.jpg'),
                     ],
                     status: "process",
                     active: 0,
@@ -82,11 +82,11 @@
         },
         methods: {
             deployChange(index) {
-                this.deploy.status = index == 4 ? "success" : "process"
+                this.deploy.status = index == 2 ? "success" : "process"
                 this.deploy.active = index
             },
             useChange(index) {
-                this.use.status = index == 2 ? "success" : "process"
+                this.use.status = index == 4 ? "success" : "process"
                 this.use.active = index
             }
         }
