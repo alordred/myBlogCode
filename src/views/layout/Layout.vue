@@ -72,10 +72,10 @@
                         </audio>
                     </el-col>
                     <el-col :span="4" style="text-align: right;margin-top: 5px;">
-                        <div style="font-size: 20px;color:#606266;margin-top: 10px">
+                        <div style="font-size: 12px;color:#606266;margin-top: 3px">
                             <b>{{githubUsername}}</b>
                         </div>
-                        <div style="color:#606266;">
+                        <div style="color:#606266;margin-top: 12px">
                             <i class="el-icon-location"></i>&nbsp;{{location?location:'未填写地址'}}
                             <br>
                         </div>
