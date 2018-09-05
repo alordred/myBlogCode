@@ -72,7 +72,7 @@
                         </audio>
                     </el-col>
                     <el-col :span="4" style="text-align: right;margin-top: 5px;">
-                        <div style="font-size: 12px;color:#606266;margin-top: 3px">
+                        <div style="font-size: 12px;color:#606266;margin-top: 0px">
                             <b>{{githubUsername}}</b>
                         </div>
                         <div style="color:#606266;margin-top: 12px">
