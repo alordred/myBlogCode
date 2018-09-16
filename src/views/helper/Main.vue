@@ -34,7 +34,7 @@
                 </el-collapse-item>
                 <el-collapse-item title="Contact" name="develop">
                     <div style="padding: 10px;line-height: 30px;color: #303133;font-size: 16px">
-                        E-mail：alordredness@gmail.com
+                        E-mail：hungshenglee.thu@gmail.com
    <!--                      配置文件读取的总是与
                         <tt>index.html</tt> 同级的
                         <tt>./static/configuration.json</tt> , 而修改配置的时候是通过
